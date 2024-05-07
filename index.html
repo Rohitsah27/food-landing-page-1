@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restorent</title>
+    <link rel="icon" type="image/png" href="./img/fav.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+
+        }
+
+
+        .logo img {
+            height: 50px;
+            margin-top: 15px;
+            margin-left: 35px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style-type: none;
+            gap: 19px;
+            margin-left: 40px;
+        }
+
+        .first-page .layer1 {
+            background: linear-gradient(to right, rgb(39, 39, 39) 20%, rgba(0, 0, 0, 0)), url(./img/img1.png);
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .layer1 h1 {
+            font-size: 60px;
+            margin-top: 200px;
+            margin-left: 30px;
+        }
+
+        .layer1 p {
+            font-family: sans-serif;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: 30px;
+            width: 400px;
+        }
+
+        .layer1 button {
+            font-size: 15px;
+            color: #222;
+            padding: 10px 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 30px;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+
+        .second-page {
+            width: 100%;
+            height: 100vh;
+            background: url(./img/sec-pg.png);
+            background-size: cover;
+            background-position: center;
+            background-color: #222;
+        }
+
+        .inner-container h1 {
+            padding-top: 5%;
+            font-size: 60px;
+            text-align: center;
+        }
+
+        .inner-container p {
+            font-size: 20px;
+            padding: 10px 170px;
+            text-align: center;
+        }
+
+        .card {
+            margin: 100px 10%;
+            padding: 20px;
+            display: flex;
+        }
+
+        .card1,
+        .card2,
+        .card3 {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        .card1 img {
+            width: 200px;
+            height: 200px;
+            border-radius: 150px;
+        }
+
+        .card2 img {
+            width: 200px;
+            height: 200px;
+            border-radius: 150px;
+        }
+
+        .card3 img {
+            width: 200px;
+            height: 200px;
+            border-radius: 150px;
+        }
+
+        .card1 p,
+        .card2 p,
+        .card3 p {
+            padding: 0px;
+        }
+
+        .third-page {
+            width: 100%;
+            height: 100vh;
+            background: url(./img/img2.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .inner-third-page {
+            width: 45%;
+            position: absolute;
+            right: 20px;
+            margin-top: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .inner-third-page h1 {
+            font-size: 60px;
+        }
+
+        .inner-third-page button {
+            width: 200px;
+            font-size: 15px;
+            color: #222;
+            padding: 10px 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 30px;
+            margin-top: 20px;
+        }
+
+        .inner-third-page p {
+            font-size: 20px;
+        }
+
+
+        .forth-page {
+            width: 100%;
+            height: 100vh;
+            background: url(./img/img3.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .inner-forth-page {
+            width: 35%;
+            position: absolute;
+            left: 10%;
+            margin-top: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .inner-forth-page h1 {
+            font-size: 60px;
+        }
+
+        .inner-forth-page button {
+            width: 200px;
+            font-size: 15px;
+            color: #222;
+            padding: 10px 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 30px;
+            margin-top: 20px;
+        }
+
+        .inner-forth-page p {
+            font-size: 25px;
+        }
+
+        .fifth-page {
+            width: 100%;
+            height: 100vh;
+            background: url(./img/sec-pg.png);
+            background-size: cover;
+            background-position: center;
+            background-color: #222;
+            text-align: center;
+
+        }
+
+        .email {
+            margin: 50px 0px;
+            padding: 14px 20% 14px 10px;
+            border-radius: 40px;
+            font-size: 15px;
+            text-align: left;
+            color: #222;
+
+        }
+
+        .fifth-page h1 {
+            padding-top: 200px;
+        }
+
+        .sixth-page {
+            background-color: #111111;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .inner-sixth-page {
+            display: flex;
+            justify-content: space-evenly;
+            width: 80%;
+            display: flex;
+            gap: 50px;
+        }
+
+        .best-pizza {
+            width: 40%;
+        }
+
+        .best-pizza .title, .about .title, .service .title, .other .title{
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        .social-media img{
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .inner-sixth-page p{
+            margin-top: 5px;
+            font-size: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="first-page">
+
+            <div class="layer1">
+                 
+
+                <div class="nav">
+                    <div class="logo">
+                        <img src="./img/logo.png" alt="error">
+                    </div>
+
+                    <div class="nav-list">
+                        <li>Home</li>
+                        <li>Product</li>
+                        <li>Promo</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                    </div>
+
+                </div>
+
+                <h1>Best Pizza</h1>
+                <p>Savor the flavor with our delectable pizzas! Made fresh, topped with love, and served hot. Bite into
+                    happiness today!</p>
+                <button>order now</button>
+
+            </div>
+        </div>
+
+        <div class="second-page">
+            <div class="inner-container">
+                <h1>Popular Menu</h1>
+                <p>Discover our most popular pizza creations! From traditional Margherita to bold BBQ Chicken, each pie
+                    is a flavor-packed masterpiece.
+                    Explore our menu and experience the ultimate satisfaction with every bite!</p>
+
+                <div class="card">
+
+                    <div class="card1">
+                        <img src="./img/pizza1.png" alt="">
+                        <h2>Title Here</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, reiciendis?</p>
+
+                    </div>
+
+                    <div class="card2">
+                        <img src="./img/pizza2.png" alt="">
+                        <h2>Title Here</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, reiciendis?</p>
+                    </div>
+
+                    <div class="card3">
+                        <img src="./img/pizza3.png" alt="">
+                        <h2>Title Here</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, reiciendis?</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="third-page">
+            <div class="inner-third-page">
+                <h1>Free Delivery</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates a amet deleniti cupiditate vitae
+                    dolores praesentium dignissimos nesciunt fuga, doloribus debitis laboriosam.</p>
+                <button>order now</button>
+
+            </div>
+        </div>
+
+        <div class="forth-page">
+            <div class="inner-forth-page">
+                <h1>Discount 20%</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates a amet deleniti cupiditate vitae
+                    dolores praesentium dignissimos nesciunt fuga, doloribus debitis laboriosam.</p>
+                <button>order now</button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="fifth-page">
+        <div class="inner-container">
+            <h1>Subscribe</h1>
+            <p>Discover our most popular pizza creations! From traditional Margherita to bold BBQ Chicken, each pie
+                is a flavor-packed masterpiece.
+                Explore our menu and experience the ultimate satisfaction with every bite!</p>
+
+            <input class="email" type="text" placeholder="Your Email">
+        </div>
+    </div>
+
+    <div class="sixth-page">
+
+        <div class="inner-sixth-page">
+
+            <div class="best-pizza">
+                <p class="title">Best Pizza</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eligendi nam officia autem ea omnis.
+                </p>
+                <div class="social-media">
+                    <img src="./img/Facebook.png" alt="">
+                    <img src="./img/WhatsApp.png" alt="">
+                    <img src="./img/Twitter.png" alt="">
+                    <img src="./img/Instagram.png" alt="">
+                </div>
+            </div>
+
+            <div class="about">
+                <p class="title">About</p>
+                <p>History</p>
+                <p>Our Team</p>
+                <p>Brand Guidelines</p>
+                <p>Terms & Condition</p>
+                <p>Privacy Policy</p>
+            </div>
+
+            <div class="service">
+                <p class="title">Service</p>
+                <p>How to Order</p>
+                <p>Our Product</p>
+                <p>Order Status</p>
+                <p>Promo</p>
+                <p>Payment Method</p>
+            </div>
+
+            <div class="other">
+                <p class="title">Other</p>
+                <p>Contact Us</p>
+                <p>About</p>
+                <p>Privacy</p>
+                
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
